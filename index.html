@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="well">All fields are mandatory</div>
+            <form class="form-horizontal" id="query-form">
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="fname">First name:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="fname" id="fname" placeholder="Enter first name">
+                        <p id="error" class="error"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="lname">Last name:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="lname" id="lname" placeholder="Enter last name">
+                        <p id="error" class="error"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Gender:</label>
+                    <div class="col-sm-9">
+                        <div class="radio-inline">
+                            <label><input type="radio" value="male" name="gender" checked />Male</label>
+                        </div>
+                        <div class="radio-inline">
+                            <label><input type="radio" value="female" name="gender" />Female</label>
+                        </div>
+                        <p id="error" class="error"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="address">Address:</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" rows="4" name="address" id="address" placeholder="Enter address"></textarea>
+                        <p id="error" class="error"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="country" class="control-label col-sm-3">Country:</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" id="country" name="country">
+                            <option value="" selected>Choose a country</option>
+                            <option value="India">India</option>
+                            <option value="United States of America">United States of America</option>
+                            <option value="United Arab Emirates">United Arab Emirates</option>
+                        </select>
+                        <p id="error" class="error"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="mobile">Mobile number:</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" id="mobile" name="mobile" placeholder="Enter mobile number">
+                        <p id="error" class="error"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="email">Email:</label>
+                    <div class="col-sm-9">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+                        <p id="error" class="error"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="pwd">Password:</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="pwd" name="password" placeholder="Enter password">
+                        <p id="error" class="error"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="cpwd">Confirm Password:</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="cpwd" name="cpassword" placeholder="Confirm password">
+                        <p id="error" class="error"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="reset" onclick="clearOutput()" class="btn btn-primary">Reset</button>
+                    </div>
+                </div> 
+                <table class="result-container">
+                    <thead>
+                        <tr>
+                            <td>
+                                <h3>Feild name</h3>
+                            </td>
+                            <td>
+                                <h3>Feild value</h3>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody id="result" ></tbody>
+                </table>
+            </form>
+        </div>
+        <!-- Custom JS -->
+        <script src="./index.js"></script>
+    </body>
+</hmtl>

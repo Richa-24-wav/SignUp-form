@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #84dddd;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* overriding bootstrap */
+.form-horizontal {
+    background-color: white;
+    padding: 50px 100px;
+}
+
+.well {
+    margin: 0;
+    background-color: #59efcf;
+    color: white;
+    font-size: 24px;
+}
+
+.form-horizontal .control-label {
+    text-align: left;
+}
+
+/* Custom styling */
+.error {
+    color: red;
+}
+
+.error-list {
+    padding-left: 15px;
+}
+
+td, th {
+    padding: 5px 10px;
+    text-align: left;
+}
+
+.result-container {
+    display: none;
+}
